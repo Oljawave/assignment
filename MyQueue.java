@@ -2,30 +2,36 @@ public class MyQueue<T> {
     private LinkedList<T> table;
 
 
-    public MyQueue() {
+    public MyQueue()
+    {
         table = new LinkedList<>();
     }
 
-    public boolean add(T object) {
+    public boolean add(T object) 
+    {
         return table.add(object);
     }
 
-    public T element() {
+    public T element() 
+    {
         return table.getFirst();
     }
 
-    public boolean offer(T object) {
+    public boolean offer(T object) 
+    {
         return table.offer(object);
     }
     
-     public T poll() {
+     public T poll()
+     {
         if(table.size() == 0){
             return null;
         }
         return table.removeFirst();
     }
 
-    public T peek() {
+    public T peek() 
+    {
         if(table.size() == 0){
             return null;
         }
