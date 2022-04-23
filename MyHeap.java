@@ -14,12 +14,14 @@ public class MyHeap<T>{
     public void heapify (int num) {
         int size = table.size();
         int emormous = num;
-        int leftChild = 2*num+1;
         int rightChild = 2*num+2;
-        if (rightChild < size && table.get(rightChild).compareTo(table.get(emormous))> 0){
+        int leftChild = 2*num+1;
+        
+        
+        if (rightChild < size.compareTo(table.get(emormous))> 0){
             emormous = rightChild;
         }
-        if (leftChild < size && table.get(leftChild).compareTo(table.get(emormous))> 0){
+        if (leftChild < size.compareTo(table.get(emormous))> 0){
             emormous = rightChild;
         }
 
@@ -27,7 +29,6 @@ public class MyHeap<T>{
             T temp = table.get(emormous);
             table.set(emormous, table.get(num));
             table.set(num, temp);
-
             heapify(emormous);
         }
 
@@ -38,11 +39,11 @@ public class MyHeap<T>{
     }
 
     private int leftChild(int value) {
-        return ((value*2));
+        return (value*2);
     }
 
     private int rightChild(int value) {
-        return (value*2) + 1;
+        return ((value*2) + 1);
     }
 
     public boolean remove(T item)
