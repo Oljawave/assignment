@@ -3,15 +3,19 @@ public class MyHeap<T>{
 
 
 
-    public MyHeap() {
+    public MyHeap() 
+    {
         table = new MyArrayList<>();
     }
 
-    public void add(T item){
+    public void add(T item)
+    {
         table.add(item);
     }
 
-    public void heapify (int num) {
+    public void heapify (int num) 
+        
+    {
         int size = table.size();
         int emormous = num;
         int rightChild = 2*num+2;
@@ -34,19 +38,27 @@ public class MyHeap<T>{
 
     }
 
-    private int parent(int value) {
+    private int parent(int value)
+        
+    {
         return (value)/2;
     }
 
-    private int leftChild(int value) {
+    private int leftChild(int value)
+        
+    {
         return (value*2);
     }
 
-    private int rightChild(int value) {
+    private int rightChild(int value)
+        
+    {
         return ((value*2) + 1);
     }
+    
 
     public boolean remove(T item)
+        
     {
         if(table.contains(item))
         {
@@ -56,7 +68,10 @@ public class MyHeap<T>{
         return false;
     }
 
-    public T removeRoot() {
+    
+    public T removeRoot()
+        
+    {
         T removed = table.get(0);
         table.swap(0,table.size()-1);
         table.remove(table.size()-1);
@@ -65,6 +80,7 @@ public class MyHeap<T>{
 
 
     public void print()
+        
     {
         for (int i=0; i<table.size(); i++)
         {
