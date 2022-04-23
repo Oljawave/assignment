@@ -13,24 +13,17 @@ public class MyStack<T>
         return object;
     }
 
-    public T pop()
-    {
-        T object = table.get(table.size()-1);
-        table.remove(table.size()-1);
-        return object;
-    }
-
+ 
     public T peek()
     {
         return table.get(table.size()-1);
     }
 
-    public boolean  isEmpty()
+  public T pop()
     {
-        if(table.size() == 0){
-            return true;
-        }
-        return false;
+        T object = table.get(table.size()-1);
+        table.remove(table.size()-1);
+        return object;
     }
 
     public int size()
